@@ -23,11 +23,11 @@ class TextWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      textAlign: TextAlign.start,
+      textAlign: TextAlign.center,
       style: TextStyle(
           fontStyle: isItalize! ? FontStyle.italic : null,
           decoration: decoration,
-          fontWeight: isBold! ? FontWeight.bold : FontWeight.normal,
+          fontWeight: isBold! ? FontWeight.w800 : FontWeight.normal,
           fontSize: fontSize,
           color: color,
           fontFamily: fontFamily),

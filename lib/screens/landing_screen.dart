@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:mathalino/screens/home_screen.dart';
 import 'package:mathalino/widgets/button_widget.dart';
 import 'package:mathalino/widgets/text_widget.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class LandingScreen extends StatelessWidget {
+  const LandingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,8 +26,9 @@ class HomeScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             TextWidget(
-              text: 'HOME',
+              text: 'MATHEMATICS LEARNER MATERIAL for\nGRADE 4',
               fontSize: 48,
+              color: Colors.blue,
               fontFamily: 'Bold',
             ),
             const SizedBox(
@@ -35,26 +37,11 @@ class HomeScreen extends StatelessWidget {
             ButtonWidget(
               fontSize: 24,
               color: Colors.blue,
-              label: 'BOOKS',
-              onPressed: () {},
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            ButtonWidget(
-              fontSize: 24,
-              color: Colors.blue,
-              label: 'DRILLS AND PRACTICES',
-              onPressed: () {},
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            ButtonWidget(
-              fontSize: 24,
-              color: Colors.blue,
-              label: 'ASSESSMENT',
-              onPressed: () {},
+              label: 'START',
+              onPressed: () {
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
+                    builder: (context) => const HomeScreen()));
+              },
             ),
           ],
         ),
