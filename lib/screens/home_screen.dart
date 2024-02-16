@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mathalino/screens/pages/book_page.dart';
 import 'package:mathalino/widgets/button_widget.dart';
 import 'package:mathalino/widgets/text_widget.dart';
 
@@ -36,7 +37,10 @@ class HomeScreen extends StatelessWidget {
               fontSize: 24,
               color: Colors.blue,
               label: 'BOOKS',
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => const BookPage()));
+              },
             ),
             const SizedBox(
               height: 20,

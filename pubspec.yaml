@@ -41,7 +41,7 @@ dependencies:
   firebase_auth:
   fluttertoast:
   get_storage:
-
+  path_provider:
 dev_dependencies:
   flutter_test:
     sdk: flutter
